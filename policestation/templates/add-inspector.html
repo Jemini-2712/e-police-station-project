@@ -1,0 +1,67 @@
+{% extends 'inner-page1.html' %}
+
+{% load static %}
+
+{% block content %}
+
+
+<section id="appointment" class="appointment section-bg" style="background-color: rgba(0, 146, 165, 0.603);">
+    <div class="container">
+        <br><br><br>
+
+      <div class="section-title">
+        <h2>Add Inspector Here</h2>
+      </div>
+      <form role="form" action="{% url 'add-inspector' %}" method="POST"  data-aos="fade-up">
+        {% csrf_token %}
+        <div class="row">
+          <div class="col-md-6 form-group mt-3">
+            <label style="font-weight: bolder;">INSPECTOR EMAIL</label>
+
+            <input type="email" name="iemail" class="form-control" placeholder="Inspector Email" style="border: 2px solid rgb(17, 96, 121);" required>
+          </div>
+            <div class="col-md-6 form-group mt-3">
+            <label style="font-weight: bolder;">INSPECTOR PASSWORD</label>
+
+              <input type="password" class="form-control" name="ipassword" placeholder="Inspector Password" style="border: 2px solid rgb(17, 96, 121);" required>
+            </div>
+        </div>    
+        <div class="row">
+          <div class="col-md-6 form-group mt-3 ">
+            <label style="font-weight: bolder;">INSPECTOR NAME</label>
+
+            <input type="text" class="form-control" name="iname" placeholder="Inspector Name" style="border: 2px solid rgb(17, 96, 121);" required>
+          </div>  
+          <div class="col-md-6 form-group mt-3">
+            <label style="font-weight: bolder;">INSPECTOR PHONE NUMBER</label>
+
+            <input type="number" class="form-control" name="iphone" placeholder="Inspector Phone Number" style="border: 2px solid rgb(17, 96, 121);" required>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 form-group mt-3">
+            <label style="font-weight: bolder;">INSPECTOR AREA NAME</label>
+
+            <input type="text" name="iarea" class="form-control"  placeholder="Enter Police Station Name" style="border: 2px solid rgb(17, 96, 121);" required>
+          </div>
+        </div>
+        
+        </div>
+
+        
+        
+            <br>
+        <div class="text-center">
+          <button type="submit" class="btn btn-primary" >ADD INSPECTOR</button>
+        </div>
+      </form>
+
+    </div>
+  </section> 
+    <!-- End Appointment Section -->
+
+
+
+
+
+  {% endblock %}

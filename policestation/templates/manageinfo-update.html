@@ -1,0 +1,46 @@
+{% extends 'inner-page1.html' %}
+
+{% load static %}
+
+{% block content %}
+
+
+<section id="appointment" class="appointment section-bg" style="background-color: rgba(0, 146, 165, 0.603);">
+    <div class="container">
+        <br><br><br>
+
+      <div class="section-title">
+        <h2>Update Inspector details Here</h2>
+      </div>
+      <form role="form" action="{% url 'manageinfo-update' info.id %}" method="POST"  data-aos="fade-up">
+        {% csrf_token %}
+        <div class="row">
+          <div class="col-md-6 form-group mt-3">
+            <input type="text" name="branchname" value="{{info.branchname}}" class="form-control" placeholder="Branch Name" style="border: 2px solid rgb(17, 96, 121);" required>
+          </div>
+            <div class="col-md-6 form-group mt-3">
+              <input type="number" class="form-control" value="{{info.branchcode}}" name="branchcode" placeholder="Branch Code" style="border: 2px solid rgb(17, 96, 121);" required>
+            </div>
+        </div>    
+        <div class="row">
+          <div class="col-md-6 form-group mt-3 ">
+            <input type="text" class="form-control" name="cityname" value="{{info.cityname}}" placeholder="City Name" style="border: 2px solid rgb(17, 96, 121);" required>
+          </div>  
+          <div class="col-md-6 form-group mt-3">
+            <input type="number" class="form-control" name="branchphone" value="{{info.branchphone}}" placeholder="Branch Phone Number" style="border: 2px solid rgb(17, 96, 121);" required>
+          </div>
+        </div>    
+        </div>
+            <br>
+        <div class="text-center">
+          <button type="submit" class="btn btn-primary" >UPDATE</button>
+        </div>
+      </form>
+
+    </div>
+  </section> 
+  <br><br>
+    <!-- End Appointment Section -->
+
+
+{% endblock %}

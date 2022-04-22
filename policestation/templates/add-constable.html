@@ -1,0 +1,66 @@
+{% extends 'inner-page1.html' %}
+
+{% load static %}
+
+{% block content %}
+
+
+<section id="appointment" class="appointment section-bg"  style="background-color: rgba(0, 146, 165, 0.603);">
+    <div class="container" >
+        <br><br><br>
+
+      <div class="section-title">
+        <h2>Add Constable Here</h2>
+      </div>
+
+      <form role="form" action="{% url 'add-constable' %}" method="POST" data-aos="fade-up">
+        {% csrf_token %}
+        <div class="row">
+          <div class="col-md-6 form-group">
+            <label style="font-weight: bolder;">CONSTABLE EMAIL</label>
+            <input type="email" name="coemail" class="form-control" placeholder="Constable Email" style="border: 2px solid rgb(17, 96, 121);" required>
+          </div>
+          <div class="col-md-6 form-group ">
+            <label style="font-weight: bolder;">CONSTABLE PASSWORD</label>
+
+            <input type="password" class="form-control" name="copassword" placeholder="Constable Password" style="border: 2px solid rgb(17, 96, 121);" required>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 form-group mt-3">
+            <label style="font-weight: bolder;">CONSTABLE NAME</label>
+
+            <input type="text" name="coname" class="form-control"  placeholder="Enter Constable Name" style="border: 2px solid rgb(17, 96, 121);" required>
+          </div>
+          <div class="col-md-6 form-group mt-3">
+            <label style="font-weight: bolder;">CONSTABLE PHONE NUMBER</label>
+
+            <input type="number" class="form-control" name="cophone" placeholder="Constable Phone Number" style="border: 2px solid rgb(17, 96, 121);" required>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 form-group mt-3">
+            <label style="font-weight: bolder;">CONSTABLE AREA</label>
+
+            <input type="text" name="coarea" class="form-control"  placeholder="Enter Constable Area" style="border: 2px solid rgb(17, 96, 121);" required>
+          </div>
+        </div>  
+
+        
+        
+            <br>
+        <div class="text-center">
+          <button type="submit" class="btn btn-primary" >ADD CONSTABLE</button>
+        </div>
+      </form>
+
+    </div>
+  </section> 
+    <!-- End Appointment Section -->
+
+
+
+
+
+
+  {% endblock %}

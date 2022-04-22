@@ -1,0 +1,75 @@
+{% extends 'inner-page.html' %}
+
+{% load static %}
+
+{% block nav %}
+    <section class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2 style="font-weight: bolder;">EDIT-PROFILE</h2>
+          <ol>
+            <li><a href="{% url 'edit-profile' %}">EDIT-PROFILE</a></li>
+            <li>EDIT-PROFILE</li>
+          </ol>
+        </div>
+
+      </div>
+    </section>
+    {% endblock %}
+
+{% block content %}
+
+<body >
+
+  <section id="appointment" style="background-color: rgb(7, 156, 119);" class="appointment section-bg">
+    <div class="container" >
+        <br>
+
+      <div class="section-title">
+        <h2>Edit Your Profile Here</h2>
+      </div>
+      <p style="color: red;">{{msg}}</p>
+
+      <form role="form" action="{% url 'edit-profile' %}" method="POST" data-aos="fade-up">
+          {% csrf_token %}
+        <div class="row">
+          <div class="col-md-6 form-group mt-3">
+            <label style="font-weight: bolder;">YOUR NAME</label>
+            <input type="text" name="uname" value="{{uid.uname}}" class="form-control" placeholder="Enter Your Name" style="border: 2px solid rgb(17, 96, 121);" required>
+          </div>
+            <div class="col-md-6 form-group mt-3">
+            <label style="font-weight: bolder;">YOUR EMAIL</label>
+
+              <input type="email" disabled class="form-control" value="{{uid.email}}" name="email" placeholder="Enter Your Email" style="border: 2px solid rgb(17, 96, 121);" required>
+            </div>
+        </div>    
+        <div class="row">
+          <div class="col-md-6 form-group mt-3 ">
+            <label style="font-weight: bolder;"> CITY </label>
+
+            <input type="text" class="form-control" name="city" value="{{uid.city}}" placeholder="Your City Name" style="border: 2px solid rgb(17, 96, 121);" required>
+          </div>  
+          <div class="col-md-6 form-group mt-3">
+            <label style="font-weight: bolder;"> STATE</label>
+
+            <input type="text" name="state" class="form-control" value="{{uid.state}}"  placeholder="Enter Your Area Name" style="border: 2px solid rgb(17, 96, 121);" required>
+          </div>
+        </div>
+            <br>
+        <div class="text-center">
+          <button type="submit" class="btn btn-primary"><i class="fa fa-edit"></i>EDIT PROFILE</button>
+        </div>
+      </form>
+
+    </div>
+  </section> 
+</body>
+    <!-- End Appointment Section -->
+
+
+
+
+
+
+  {% endblock %}

@@ -1,0 +1,94 @@
+{% extends 'inner-page.html' %}
+
+{% load static %}
+
+{% block nav %}
+    <section class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2 style="font-weight: bolder;">DASHBOARD</h2>
+          <ol>
+            <li><a href="{% url 'citizen-dashboard1' %}">DASHBOARD</a></li>
+            <li>DASHBOARD</li>
+          </ol>
+        </div>
+
+      </div>
+    </section>
+    {% endblock %}
+
+{% block content %}
+
+
+
+<body style="background-color: rgb(4, 15, 53);">
+
+
+  <section id="featured-services" class="featured-services">
+    <div class="container" data-aos="fade-up">
+
+      <div class="row">
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+          <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+            <h4 class="title"><a href="{% url 'citizen-dashboard1' %}">BACK TO HOME FROM HERE</a></h4>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+          <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
+            <h4 class="title"><a href="{% url 'edit-profile' %}">EDIT YOUR PROFILE HERE</a></h4>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+          <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
+            <h4 class="title"><a href="{% url 'change-password' %}">CHANGE YOUR PASSWORD HERE</a></h4>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+          <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
+            <h4 class="title"><a href="{% url 'addfir' %}">ADD YOUR FIR FROM HERE</a></h4>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+  <section id="featured-services" class="featured-services">
+    <div class="container" data-aos="fade-up">
+
+      <div class="row">
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+          <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+            <h4 class="title"><a href="{% url 'viewfir' %}">VIEW YOUR FIR FROM HERE</a></h4>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+          <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
+            <h4 class="title"><a href="{% url 'addcomplaint' %}">ADD YOUR COMPLAINT HERE</a></h4>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+          <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
+            <h4 class="title"><a href="{% url 'viewcomplaint' %}">VIEW YOUR COMPLAINTS HERE</a></h4>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+          <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
+            <h4 class="title"><a href="{% url 'logout' %}">LOG-OUT FROM HERE</a></h4>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+</body>
+{% endblock %}

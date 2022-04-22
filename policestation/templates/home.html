@@ -1,0 +1,74 @@
+{% extends 'inner-page1.html' %}
+
+{% load static %}
+{% block content %}
+
+
+<br><br><br><br>
+<br><br>
+
+  
+<body style="background-color: rgb(4, 15, 53);">
+
+  <section id="team" class="team">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 col-md-4 d-flex  align-items-stretch ">
+        <div class="member">
+          <h4><a href="{% url 'manageinfo' %}">MANAGE INFORMATION FROM HERE</a></h4>
+
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-4 d-flex align-items-stretch">
+        <div class="member">
+          <h4><a href="{% url 'addinfo' %}">ADD INFORMATION FROM HERE</a></h4>
+          
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+        <div class="member">
+          <h4><a href="{% url 'complaints' %}">VIEW COMPLAINTS FROM HERE</a></h4>
+          
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<section id="team" class="team">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 col-md-4 d-flex  align-items-stretch ">
+        <div class="member">
+          <h4><a href="{% url 'firs' %}">VIEW ALL THE FIRS FROM HERE</a></h4>
+
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-4 d-flex align-items-stretch">
+        <div class="member">
+          <h4><a href="{% url 'view-inspectors' %}">VIEW INSPECTORS FROM HERE</a></h4>
+          
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+        <div class="member">
+          <h4><a href="{% url 'view-constables' %}">VIEW CONSTABLES FROM HERE</a></h4>
+          
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+
+</body>
+{% endblock %}
