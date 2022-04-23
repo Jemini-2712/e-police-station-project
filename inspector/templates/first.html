@@ -3,12 +3,11 @@
 {% load static %}
 {% block content %}
 <!-- End About Section -->
-<br><br><br><br>
+<!-- <br><br><br><br>
 <br><br><br><br>
 
 
-    <!-- ======= Counts Section ======= -->
-    <section id="counts" class="counts">
+     <section id="counts" class="counts">
 <body style="background-image: url('{% static 'assets/img/1.jpg' %}')">
 
       <div class="container">
@@ -51,8 +50,8 @@
     </section>
     
 <br><br><br><br>
-<br><br><br><br>
-    
+<br><br><br><br> -->
+     -->
 
 <!-- 
 
@@ -117,6 +116,56 @@
 
       </div>
     </section> -->
+
+    <br><br><br><br>
+    <br><br>
+    
+    
+      
+    
+    
+    
+    </body>
+   
+     <body style="background-color: rgb(4, 15, 53);">
+
+
+      <section id="featured-services" class="featured-services">
+        <div class="container" data-aos="fade-up">
+    
+          <div class="row">
+            <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+              <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+                <h4 class="title"><a href="">BACK TO HOME FROM HERE</a></h4>
+              </div>
+            </div>
+    
+            <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+              <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
+                <h4 class="title"><a href="{% url 'show-fir' %}">VIEW FIR FROM HERE</a></h4>
+              </div>
+            </div>
+    
+            <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+              <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
+                <h4 class="title"><a href="{% url 'show-complaints' %}">VIEW COMPLAINTS FROM HERE</a></h4>
+              </div>
+            </div>
+    
+            <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+              <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
+                <h4 class="title"><a href="{% url 'sign-out' %}">LOG-OUT FROM HERE</a></h4>
+              </div>
+            </div>
+    
+          </div>
+    
+        </div>
+      </section>
+      
+    </body>
+    
+
 
 {% endblock %}
 

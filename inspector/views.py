@@ -21,6 +21,7 @@ def inspector_login(request):
 
     return render(request,'inspector-login.html')
 
+
 def show_fir(request):
     uid = Inspector.objects.get(iemail=request.session['iemail'])
     showfirs = Fir.objects.all()
